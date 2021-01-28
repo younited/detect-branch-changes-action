@@ -1,0 +1,23 @@
+name: Detect path Changes
+inputs:
+  base_branch:
+    description: "Branch to compare with"
+    required: false
+    default: ${{ github.event.repository.default_branch  }}
+  pathspec:
+    description: "Pattern used to limit paths in the `git diff-tree` command."
+    required: false
+    default: ""
+outputs:
+  changed:
+    description: "Whether or not files matched by the pathspec were changed."
+    value: ${{ steps.run.outputs.changed }}
+  fork_point_sha:
+    description: "The sha we compared with"
+    value: ${{ steps.run.outputs.fork_point_sha }}
+runs:
+  using: 'composite'
+  steps:
+    - id: run
+      run: ${{ github.action_path }}/entrypoint.sh ${{ inputs.base_branch }} ${{ inputs.pathspec }}
+      shell: bash
