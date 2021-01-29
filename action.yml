@@ -2,6 +2,10 @@ name: Detect Branch Changes
 description: |
   Detect all changes in a branch. This is done by detecting the fork-point of the current branch with the
   repo's base branch.
+branding:
+  icon: git-branch
+  color: yellow
+author: Bert Goethals
 inputs:
   base_branch:
     description: "Branch to compare with"
