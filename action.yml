@@ -1,11 +1,14 @@
-name: Detect path Changes
+name: Detect Branch Changes
+description: |
+  Detect all changes in a branch. This is done by detecting the fork-point of the current branch with the
+  repo's base branch.
 inputs:
   base_branch:
     description: "Branch to compare with"
     required: false
     default: ${{ github.event.repository.default_branch  }}
   pathspec:
-    description: "Pattern used to limit paths in the `git diff-tree` command."
+    description: "Pattern used to limit paths in the `git diff` command."
     required: false
     default: ""
 outputs:
