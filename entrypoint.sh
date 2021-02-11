@@ -2,7 +2,7 @@
 set -e
 
 BASE_BRANCH="remotes/origin/$1"
-PATHSPEC=$2
+PATHSPEC=${@:2}
 FORK_POINT_SHA=$(git merge-base --fork-point $BASE_BRANCH)
 
 echo ::set-output name=fork_point_sha::$FORK_POINT_SHA
