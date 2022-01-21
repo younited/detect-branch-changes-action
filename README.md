@@ -1,18 +1,18 @@
 # Detect Branch Changes
 
-This is a GitHub Action allows you to detect all changes in a branch.
+This is GitHub Action allows you to detect all changes in a branch.
 This is done by detecting the fork-point of the current branch with the
 repo's main branch.
 
 ## Inputs
 
-- `base_branch` - Branch where the fork-point will be found on. Defaults to the repo's default_branch.
+- `base_branch` - Branch where the fork-point will be found on. Defaults to the repo's `default_branch`.
 - `pathspec` - Which paths should be considered to detect changes on. This path spec must be compattible with the `git diff` command.
 
 ## Outputs
 
-- `changed` - Returns `"true"` or `"false"` if files where changed on since the current branche forked from `base_branch`
-- `fork_point_sha` - The commit sha that is considered the fork point between this branch and and the `base_branch`
+- `changed` - Returns `"true"` or `"false"` if files were changed on the current branch since it was forked from `base_branch`.
+- `fork_point_sha` - The commit SHA that is considered the fork point between this branch and and the `base_branch`.
 
 ## Usage
 
