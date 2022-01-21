@@ -19,13 +19,13 @@ repo's main branch.
 ## Detect all changes (default behaviour)
 
 ```yaml
-- uses: younited/detect-branch-changes-action@v0.1.1
+- uses: younited/detect-branch-changes-action@v0.1.3
 ```
 
 ## Detect changes in different root folders
 
 ```yaml
-- uses: younited/detect-branch-changes-action@v0.1.1
+- uses: younited/detect-branch-changes-action@v0.1.3
   with:
     pathspec: "application configs"
 ```
@@ -33,7 +33,7 @@ repo's main branch.
 ## Detect file changes
 
 ```yaml
-- uses: younited/detect-branch-changes-action@v0.1.1
+- uses: younited/detect-branch-changes-action@v0.1.3
   with:
     pathspec: "a/dee/nested/folder/*.rb"
 ```
@@ -41,7 +41,7 @@ repo's main branch.
 ## Detect based on an other branch
 
 ```yaml
-- uses: younited/detect-branch-changes-action@v0.1.1
+- uses: younited/detect-branch-changes-action@v0.1.3
   with:
     base_branch: "hotfix-147"
 ```
